@@ -50,16 +50,6 @@
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
     {
-        "key": "tab",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "shift+tab",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    },
-    {
         "key": "ctrl+;",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"

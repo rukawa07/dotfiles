@@ -26,6 +26,8 @@ command -qv nvim && alias vim nvim
 # aliases for my func
 alias sug "setup_git"
 alias ira "init_react_app"
+alias obs "obsidian_select"
+alias qnote "obsidian_quick_note"
  
 # set -gx EDITOR nvim
 set -gx PATH bin $PATH
@@ -55,16 +57,6 @@ source (pyenv init - | psub)
 # mdpdf
 set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 
-# switch (uname)
-#   case Darwin
-#     source (dirname (status --current-filename))/config-osx.fish
-#   case Linux
-#     # Do nothing
-#   case '*'
-#     source (dirname (status --current-filename))/config-windows.fish
-# end
-# 
-# set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
-# if test -f $LOCAL_CONFIG
-#   source $LOCAL_CONFIG
-# end
+# XDG Base Directory
+set -gx XDG_CONFIG_HOME ~/.config
+

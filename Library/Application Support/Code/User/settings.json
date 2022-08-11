@@ -1323,4 +1323,6 @@
   "extensions.ignoreRecommendations": true,
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.accessibilitySupport": "off",
 }
