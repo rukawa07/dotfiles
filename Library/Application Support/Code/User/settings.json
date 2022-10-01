@@ -1,11 +1,11 @@
 {
   // terminate
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.fontFamily": "HackGen35 Console NFJ",
+  "terminal.integrated.fontSize": 12,
   "workbench.startupEditor": "newUntitledFile",
   // editor
-  "editor.fontFamily": "Hack",
-  "editor.fontSize": 11,
+  "editor.fontFamily": "HackGen35 Console NFJ",
+  "editor.fontSize": 12,
   "editor.tabSize": 4,
   "editor.renderWhitespace": "all",
   "editor.wordWrap": "on",
