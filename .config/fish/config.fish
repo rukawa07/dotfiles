@@ -7,6 +7,7 @@ set -gx TERM xterm-256color
 set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user no
+set -g theme_display_hostname no
 
 # aliases
 alias ls "ls -p -G"
