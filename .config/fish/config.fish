@@ -8,6 +8,7 @@ set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user no
 set -g theme_display_hostname no
+set -g theme_display_git_default_branch yes
 
 # aliases
 alias ls "ls -p -G"
@@ -19,7 +20,7 @@ alias ta "tmux a -t"
 alias td "tmux kill-session -t"
 alias tl "tmux ls"
 alias g git
-alias code "open . -a Visual\ Studio\ Code"
+# alias code "open . -a Visual\ Studio\ Code"
 alias buvss "cp ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/keybindings.json ~/.config/Code/User"
 alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 command -qv nvim && alias vim nvim
@@ -37,7 +38,7 @@ set -gx PATH ~/.local/bin $PATH
 
 # exa
 if type -q exa
-  alias ll "exa -l -g --icons"
+  alias ll "exa -l -g --icons --group-directories-first"
   alias lla "ll -a"
 end
  
@@ -60,4 +61,10 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
+
+# Android Emulator
+set -gx PATH /Users/sfurukawa/Library/Android/sdk/emulator/ $PATH
+
+# react-native
+set -gx REACT_EDITOR code
 
