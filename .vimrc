@@ -48,7 +48,7 @@ if has('nvim')
 endif
 
 " Suppress appending <PasteStart> and <PasteEnd> when pasting
-set t_BE=
+" set t_BE=
 
 "ステータスメッセージをオフ(これにより高速化できる)
 set nosc noru nosm
@@ -78,6 +78,10 @@ set wildignore+=*/node_modules/*
 
 " Turn off paste mode when leaving insert
 autocmd InsertLeave * set nopaste
+
+" クリップボード連携
+set clipboard^=unnamed,unnamedplus
+
 
 " Add asterisks in block comments
 set formatoptions+=r
