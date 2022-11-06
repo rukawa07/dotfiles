@@ -9,5 +9,6 @@ function make_react_component
     gsed -i s/Sample/$argv/g index.tsx
     echo "import { StyleSheet } from 'react-native';"\n\n"export const styles = StyleSheet.create({"\n"});" > styles.ts
     touch hooks.tsx
+    cd ../
   end
 end
