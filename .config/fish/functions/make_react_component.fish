@@ -5,9 +5,23 @@ function make_react_component
     mkdir $argv
     cd ./$argv
 
-    echo "type SampleProps = {"\n"};"\n\n"const Sample = (props:SampleProps) => {"\n"return <></>;"\n"};"\n\n"export default Sample;" > index.tsx
+    echo \
+    "type SampleProps = {
+
+    };
+
+    const Sample = (props:SampleProps) => {
+      return <></>;
+    };
+
+    export default Sample;" > index.tsx
     gsed -i s/Sample/$argv/g index.tsx
-    echo "import { StyleSheet } from 'react-native';"\n\n"export const styles = StyleSheet.create({"\n"});" > styles.ts
+    echo \
+    "import { StyleSheet } from 'react-native';
+
+    export const styles = StyleSheet.create({
+
+    });" > styles.ts
     touch hooks.tsx
     cd ../
   end
