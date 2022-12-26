@@ -64,8 +64,10 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
 
-# Android Emulator
-set -gx PATH /Users/sfurukawa/Library/Android/sdk/emulator/ $PATH
+# Android Studio
+set -gx ANDROID_SDK_ROOT /Users/sfurukawa/AndroidStudio
+set -gx PATH $ANDROID_SDK_ROOT/emulator
+set -gx PATH $ANDROID_SDK_ROOT/platform-tools
 
 # react-native
 set -gx REACT_EDITOR code
