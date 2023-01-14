@@ -31,6 +31,7 @@ alias ira "init_react_app"
 alias obs "obsidian_select"
 alias qnote "obsidian_quick_note"
 alias mkcmp "make_react_component"
+alias mkghrr "make_github_remote_repo"
  
 # set -gx EDITOR nvim
 set -gx PATH bin $PATH
