@@ -2,7 +2,6 @@
 set fish_greeting 
 
 set -gx TERM xterm-256color
-
 # theme (bobthefish)
 set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
@@ -65,9 +64,13 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 set -gx XDG_CONFIG_HOME ~/.config
 
 # Android Studio
-set -gx ANDROID_SDK_ROOT /Users/sfurukawa/AndroidStudio
-set -gx PATH $ANDROID_SDK_ROOT/emulator
-set -gx PATH $ANDROID_SDK_ROOT/platform-tools
+set -gx ANDROID_HOME /Users/sfurukawa/.AndroidStudio
+set -gx ANDROID_SDK_ROOT /Users/sfurukawa/.AndroidStudio
+set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
+set -gx PATH $ANDROID_HOME/emulator $PATH
+
+# JAVA
+set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
 
 # react-native
 set -gx REACT_EDITOR code
