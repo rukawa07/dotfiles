@@ -80,14 +80,8 @@
       ]
     }
   ],
-  // prettier
-  "prettier.semi": true,
-  "prettier.trailingComma": "none",
-  "prettier.printWidth": 80,
-  "prettier.singleQuote": true,
   // others
   "codesnap.containerPadding": "0em",
-  "tabnine.experimentalAutoImports": true,
   "workbench.editor.untitled.hint": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
   // language-specific settings
@@ -106,8 +100,9 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  // eslint
+  "eslint.packageManager": "npm", // ESLintライブラリ解決時に使うパッケージマネージャ
   "editor.codeActionsOnSave": [
-    "source.organizeImports",
     "source.fixAll.eslint"
   ],
   "python.linting.pylintEnabled": false,
@@ -335,6 +330,18 @@
           "scope": "punctuation.definition.string.begin.markdown",
           "settings": {
             "foreground": "#e2a478"
+          }
+        },
+        {
+          "scope": "punctuation.definition.list.begin.markdown",
+          "settings": {
+            "foreground": "#c5e478"
+          }
+        },
+        {
+          "scope": "entity.name.section.markdown",
+          "settings": {
+            "foreground": "#ffffff"
           }
         },
         {
@@ -938,11 +945,12 @@
         {
           "scope": [
             "markup.heading.markdown",
+            "punctuation.definition.heading.markdown",
             "markup.heading.setext.1.markdown",
             "markup.heading.setext.2.markdown"
           ],
           "settings": {
-            "foreground": "#82B1FF"
+            "foreground": "#e2a478"
           }
         },
         {
@@ -955,7 +963,7 @@
         {
           "scope": "markup.bold.markdown",
           "settings": {
-            "foreground": "#C5E478",
+            "foreground": "#e27878",
             "fontStyle": "bold"
           }
         },
@@ -978,7 +986,7 @@
             "markup.underline.link.image.markdown"
           ],
           "settings": {
-            "foreground": "#e27878"
+            "foreground": "#82B1FF"
           }
         },
         {
@@ -1020,7 +1028,7 @@
         {
           "scope": "markup.inline.raw.string.markdown",
           "settings": {
-            "foreground": "#C5E478"
+            "foreground": "#89b8c2"
           }
         },
         {
@@ -1316,13 +1324,8 @@
       ]
     },
   },
-  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
-  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
   "extensions.ignoreRecommendations": true,
-  "prettier.jsxBracketSameLine": true,
-  "prettier.jsxSingleQuote": true,
   "vsicons.dontShowNewVersionMessage": true,
   "editor.accessibilitySupport": "off",
+  "prettier.requireConfig": true,
 }
