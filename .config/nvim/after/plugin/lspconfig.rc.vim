@@ -89,11 +89,6 @@ nvim_lsp.dartls.setup {
   on_attach = on_attach,
 }
 
-nvim_lsp.zeta_note.setup {
-  on_attach = on_attach,
-  cmd = {'/Users/sfurukawa/.zeta_note'}
-}
-
 -- nvim_lsp.diagnosticls.setup {
 --   on_attach = on_attach,
 --   filetypes = { 'python' },

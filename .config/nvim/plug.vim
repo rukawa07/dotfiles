@@ -13,7 +13,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'preservim/nerdcommenter'
 
 if has("nvim")
-  Plug 'hoob3rt/lualine.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'nvim-lua/popup.nvim'
