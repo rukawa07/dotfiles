@@ -10,6 +10,11 @@
         "when": "terminal.active"
     },
     {
+        "key": "space",
+        "command": "workbench.action.nextEditor",
+        "when": "activeWebviewPanelId == markdown.preview",
+    },
+    {
         "key": "tab",
         "command": "selectNextSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
@@ -29,16 +34,16 @@
         "command": "-selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
-    {
-        "key": "ctrl+f",
-        "command": "tabnine.tab-override",
-        "when": "suggestWidgetVisible && tabnine.tab-override && textInputFocus && vim.mode == 'Insert'"
-    },
-    {
-        "key": "tab",
-        "command": "-tabnine.tab-override",
-        "when": "suggestWidgetVisible && tabnine.tab-override && textInputFocus"
-    },
+    // {
+    //     "key": "ctrl+f",
+    //     "command": "tabnine.tab-override",
+    //     "when": "suggestWidgetVisible && tabnine.tab-override && textInputFocus && vim.mode == 'Insert'"
+    // },
+    // {
+    //     "key": "tab",
+    //     "command": "-tabnine.tab-override",
+    //     "when": "suggestWidgetVisible && tabnine.tab-override && textInputFocus"
+    // },
     {
         "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.commit",
@@ -63,5 +68,5 @@
         "key": "cmd+'",
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-    }
+    },
 ]

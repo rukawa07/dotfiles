@@ -47,6 +47,14 @@
         "g",
         "b"
       ]
+    },
+    {
+      "before": [
+        "space"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
