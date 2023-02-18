@@ -1357,4 +1357,5 @@
   "vsicons.dontShowNewVersionMessage": true,
   "editor.accessibilitySupport": "off",
   "prettier.requireConfig": true,
+  "react-native-tools.showUserTips": false,
 }
