@@ -1,10 +1,5 @@
 [
     {
-        "key": "ctrl+[BracketLeft]",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
         "key": "ctrl+shift+[BracketLeft]",
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
@@ -68,5 +63,15 @@
         "key": "cmd+'",
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "textInputFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-cursorRight",
+        "when": "textInputFocus"
     },
 ]
