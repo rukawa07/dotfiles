@@ -67,7 +67,7 @@
     {
         "key": "ctrl+f",
         "command": "cursorRight",
-        "when": "textInputFocus && vim.mode != 'Insert'"
+        "when": "textInputFocus && vim.mode != 'Insert' && vim.mode != 'Normal'"
     },
     {
         "key": "ctrl+f",
