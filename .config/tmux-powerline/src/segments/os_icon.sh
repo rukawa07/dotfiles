@@ -7,7 +7,14 @@ run_segment() {
     Darwin)
       echo '' ;;
     Linux)
-      echo '' ;;
+      case $(lsb_release -is) in
+        Raspbian)
+          echo '' ;;
+        Ubuntu)
+          echo '' ;;
+        *)
+          echo '' ;;
+        esac ;;
     *)
       echo '' ;;
   esac
