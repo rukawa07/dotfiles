@@ -16,7 +16,8 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias ts "tmux new -s"
 alias ta "tmux a -t"
-alias td "tmux kill-session -t"
+alias td "tmux detach"
+alias tk "tmux kill-session -t"
 alias tl "tmux ls"
 alias g git
 alias rr "cd $(git rev-parse --show-toplevel)"
@@ -76,3 +77,5 @@ set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
 # react-native
 set -gx REACT_EDITOR code
 
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
