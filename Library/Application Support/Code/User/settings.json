@@ -102,15 +102,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[sass]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -120,15 +111,23 @@
   // eslint
   "eslint.packageManager": "npm", // ESLintライブラリ解決時に使うパッケージマネージャ
   "editor.codeActionsOnSave": [
-    "source.fixAll.eslint"
+    "source.fixAll.eslint",
+    "source.fixAll.stylelint"
   ],
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ], //styleLintはcssとscssファイルのみ
+  //↓VSCodeデフォルトのフォーマットは無効
+  "css.validate": false,
+  "scss.validate": false,
   "python.linting.pylintEnabled": false,
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.linting.lintOnSave": true,
   "python.formatting.provider": "autopep8",
   // theme 
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Iceberg",
   "workbench.colorCustomizations": {
     "[Iceberg]": {
@@ -1354,10 +1353,18 @@
     },
   },
   "extensions.ignoreRecommendations": true,
-  "vsicons.dontShowNewVersionMessage": true,
   "editor.accessibilitySupport": "off",
   "prettier.requireConfig": true,
   "react-native-tools.showUserTips": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  }
 }

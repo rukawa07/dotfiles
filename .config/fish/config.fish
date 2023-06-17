@@ -33,20 +33,12 @@ alias obs "obsidian_select"
 alias qnote "obsidian_quick_note"
 alias mkcmp "make_react_component"
 alias mkghrr "make_github_remote_repo"
- 
-# set -gx EDITOR nvim
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
 
 # exa
 if type -q exa
   alias ll "exa -l -g --icons --group-directories-first"
   alias lla "ll -a"
 end
- 
-# Flutter
-set -gx PATH /Users/sfurukawa/flutter/bin $PATH
 
 # PostgreSQL
 set -gx PGDATA /usr/local/var/postgres
@@ -54,22 +46,34 @@ set -gx PGDATA /usr/local/var/postgres
 # homebrewのauto-updateを停止 
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 
-# pyenv
-set -gx PYENV_ROOT $HOME/.pyenv
-set -gx PATH $PYENV_ROOT/bin $PATH
-source (pyenv init - | psub)
-
 # mdpdf
 set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
 
+
+
+# ---------- PATH ----------
+
+fish_add_path bin 
+fish_add_path ~/bin 
+fish_add_path ~/.local/bin 
+fish_add_path /usr/local/bin
+ 
+# Flutter
+fish_add_path /Users/sfurukawa/flutter/bin 
+
+# pyenv
+set -gx PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin 
+source (pyenv init - | psub)
+
 # Android Studio
 set -gx ANDROID_HOME /Users/sfurukawa/.AndroidStudio
 set -gx ANDROID_SDK_ROOT /Users/sfurukawa/.AndroidStudio
-set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
-set -gx PATH $ANDROID_HOME/emulator $PATH
+fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin 
+fish_add_path $ANDROID_HOME/emulator 
 
 # JAVA
 set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
@@ -77,5 +81,9 @@ set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
 # react-native
 set -gx REACT_EDITOR code
 
+# volta
 set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+fish_add_path "$VOLTA_HOME/bin" 
+
+# rbenv
+status --is-interactive; and rbenv init - fish | source
