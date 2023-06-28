@@ -1,3 +1,6 @@
+env:
+  TERM: alacritty-direct
+
 font:
   normal:
     family: HackGen35 Console NFJ
