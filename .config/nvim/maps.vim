@@ -3,9 +3,8 @@
 " <Leader>
 let mapleader = ' '
 
-nnoremap <S-C-p> "0p
-" Delete without yank
-nnoremap <leader>d "_d
+nnoremap <S-C-p> "0p Delete without yank
+" nnoremap <leader>d "_d
 nnoremap x "_x
 
 " Increment/decrement
@@ -37,6 +36,11 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
+" Save and Quit
+nnoremap <Leader>s :w<Return>
+nnoremap <Leader>q :wq<Return>
+nnoremap <Leader>Q :q!<Return>
+
 "-----------------------------
 " Tabs
 
@@ -51,22 +55,26 @@ nmap <Tab> :tabnext<Return>
 " Split window
 " nmap ss :split<Return><C-w>w
 " nmap sv :vsplit<Return><C-w>w
+
 " Move window
 " nmap <Space> <C-w>w
 " map s<left> <C-w>h
 " map s<up> <C-w>k
 " map s<down> <C-w>j
 " map s<right> <C-w>l
-" map sh <C-w>h
-" map sk <C-w>k
-" map sj <C-w>j
-" map sl <C-w>l
+nmap <Leader>h <C-w>h
+nmap <Leader>k <C-w>k
+nmap <Leader>j <C-w>j
+nmap <Leader>l <C-w>l
+
 " Close window
-" nmap sc <C-w>c
+nmap <Leader>x <C-w>c
+
 " Return to the previous file
 " nmap sr <C-^>
+
 " Resize window
-nmap <C-w><left> <C-w><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
+" nmap <C-w><left> <C-w><
+" nmap <C-w><right> <C-w>>
+" nmap <C-w><up> <C-w>+
+" nmap <C-w><down> <C-w>-
