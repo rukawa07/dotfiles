@@ -41,6 +41,7 @@ set shell=fish
 "書き込むファイル名がこの中にあればバックアップファイルを作成しない
 set backupskip=/tmp/*,/private/tmp/*
 
+
 " incremental substitution (neovim)
 if has('nvim')
   "文字列置換をインタラクティブに表示
@@ -169,14 +170,14 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   " for transparent colorscheme
   autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight CursorLine ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
   " autocmd ColorScheme * highlight NonText ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight LineNr ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight CursorLine ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight CursorLineNr ctermbg=NONE guibg=NONE
+  " autocmd ColorScheme * highlight CursorLineNr ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight EndOfBuffer ctermbg=NONE guibg=NONE
   colorscheme iceberg
-  
 endif
 
 "}}}

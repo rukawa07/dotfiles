@@ -1,7 +1,7 @@
 # ログイン時に表示するテキスト
 set fish_greeting 
 
-# set -gx TERM xterm-256color
+# set -gx TERM screen-256color
 # theme (bobthefish)
 set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
@@ -87,3 +87,6 @@ fish_add_path "$VOLTA_HOME/bin"
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
+
+# tmux sessionにアタッチ
+attach_tmux_session
