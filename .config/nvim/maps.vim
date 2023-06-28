@@ -1,5 +1,8 @@
 " Description: Keymaps
 
+" <Leader>
+let mapleader = ' '
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
@@ -9,11 +12,15 @@ nnoremap x "_x
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+" Select all
+nnoremap <Leader>a gg<S-v>G
+
 " Delete a word backwards
 " nnoremap dw vb"_d
 
-" Select all
-nmap <C-a> gg<S-v>G
+" jjをESCキーに対応
+inoremap <silent> jj <ESC>
+
 
 " Save with root permission
 command! W w !sudo tee > /dev/null %
@@ -30,9 +37,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-"nerd commenter
-let mapleader = ";"
-
 "-----------------------------
 " Tabs
 
@@ -42,7 +46,7 @@ nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
 "------------------------------
-" Windows
+" Window
 
 " Split window
 " nmap ss :split<Return><C-w>w
