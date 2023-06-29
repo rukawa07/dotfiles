@@ -1,4 +1,4 @@
-local status, lualine = pcall(require, "orgmode")
+local status, orgmode = pcall(require, "orgmode")
 if (not status) then return end
 
 -- Load custom treesitter grammar for org filetype
@@ -21,20 +21,21 @@ require('orgmode').setup({
   org_agenda_files = {'~/MyDrive/org/*'},
   org_default_notes_file = '~/MyDrive/org/main.org',
   org_todo_keywords = { 'TASK(t)', 'WAIT(w)', '|', 'DONE(d)', 'ABORT(a)', 'SOMEDAY(s)' },
-  org_tag_alist = { 'PROJECT:p', 'MEMO:m', 'PETIT:t' },
+  --org_tag_alist = { 'PROJECT:p', 'MEMO:m', 'PETIT:t' },
   org_capture_templates = {
-    t = { description = 'Task', template = '\n** TASK %?\n   CREATED: %U\n', headline = 'inbox'},
-    i = { description = 'Idea', template = '\n** %?\n   CREATED: %U\n', headline = 'idea'},
+    t = { description = 'Task', template = '** TASK %?\n   CREATED: %U\n', headline = 'inbox'},
+    i = { description = 'Idea', template = '** %?\n   CREATED: %U\n', headline = 'idea'},
   },
   org_refile_targets = { '~/MyDrive/org/' },
   org_log_done = 'time',
-  org_clock_clocked_in_display = 'frame-title',
+  --org_clock_clocked_in_display = 'frame-title',
   mappings = {
     org = {
         org_clock_goto = '<Leader>og'
       }
     } 
 })
+
 
 -- require('org-agenda').setup {
 --   org_agenda_span = 1,
@@ -44,3 +45,4 @@ require('orgmode').setup({
 --   },
 --   org_columns_default_format = '%68ITEM(Task) %6Effort(Effort){:} %6CLOCKSUM(Clock){:}',
 -- }
+--
