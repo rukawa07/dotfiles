@@ -20,7 +20,7 @@ alias td "tmux detach"
 alias tk "tmux kill-session -t"
 alias tl "tmux ls"
 alias g git
-alias rr "cd $(git rev-parse --show-toplevel)"
+alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
 # alias code "open . -a Visual\ Studio\ Code"
 alias buvss "cp ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/keybindings.json ~/.config/Code/User"
