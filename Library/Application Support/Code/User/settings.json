@@ -3,6 +3,7 @@
   "terminal.integrated.fontFamily": "HackGen35 Console NFJ",
   "terminal.integrated.fontSize": 12,
   "workbench.startupEditor": "newUntitledFile",
+
   // editor
   "editor.fontFamily": "HackGen35 Console NFJ",
   "editor.fontSize": 12,
@@ -13,6 +14,7 @@
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.autoClosingBrackets": "always",
+
   // vim
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
@@ -41,21 +43,102 @@
     },
     {
       "before": [
-        "<C-k>"
+        "<Space>",
+        "s"
       ],
-      "after": [
-        "g",
-        "b"
+      "commands": [
+        {
+          "command": "workbench.action.files.save"
+        }
       ]
     },
     {
       "before": [
-        "space"
+        "<Space>",
+        "q"
       ],
       "commands": [
-        "workbench.action.nextEditor"
+        {
+          "command": ":wq"
+        },
       ]
-    }
+    },
+    // select All lines
+    {
+      "before": [
+        "<Space>",
+        "a"
+      ],
+      "after": [
+        "g",
+        "g",
+        "<S-v>",
+        "<S-g>",
+      ]
+    },
+    // focus on keyword  and show the hover
+    {
+      "before": [
+        "<Space>",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    // jump to definition or callers
+    {
+      "before": [
+        "<Space>",
+        "j"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition"
+        }
+      ],
+      "when": [
+        "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+      ]
+    },
+    // navigate to the previous cursor
+    {
+      "before": [
+        "<Space>",
+        "h"
+      ],
+      "commands": [
+        {
+       "command": "workbench.action.navigateBack"
+        }
+      ],
+    },
+    // navigate to the next cursor
+    {
+      "before": [
+        "<Space>",
+        "l"
+      ],
+      "commands": [
+        {
+       "command": "workbench.action.navigateForward"
+        }
+      ],
+    },
+    // toggle file blame
+    {
+      "before": [
+        "<Space>",
+        "b"
+      ],
+      "commands": [
+        {
+       "command": "gitlens.toggleFileBlame"
+        }
+      ],
+    },
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -78,19 +161,10 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "g",
-        "b"
-      ]
-    }
   ],
+
   // others
   "codesnap.containerPadding": "0em",
-  "workbench.editor.untitled.hint": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
   // language-specific settings
   "[typescript]": {
@@ -102,22 +176,12 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
+
   // eslint
-  "eslint.packageManager": "npm", // ESLintライブラリ解決時に使うパッケージマネージャ
   "editor.codeActionsOnSave": [
     "source.fixAll.eslint",
     "source.fixAll.stylelint"
   ],
-  "stylelint.validate": [
-    "css",
-    "scss"
-  ], //styleLintはcssとscssファイルのみ
   //↓VSCodeデフォルトのフォーマットは無効
   "css.validate": false,
   "scss.validate": false,
@@ -1368,5 +1432,11 @@
     "scminput": false
   },
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"></div>",
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.editor.empty.hint": "hidden",
+  "git.openRepositoryInParentFolders": "always",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "gitlens.rebaseEditor.ordering": "asc"
 }
