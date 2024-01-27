@@ -63,6 +63,17 @@
         },
       ]
     },
+    {
+      "before": [
+        "<Space>",
+        "<S-q>"
+      ],
+      "commands": [
+        {
+          "command": ":q!"
+        },
+      ]
+    },
     // select All lines
     {
       "before": [
@@ -139,6 +150,18 @@
         }
       ],
     },
+    // rename symbol (refacor)
+    {
+      "before": [
+       "<Space>",
+        "r"
+      ],
+      "commands": [
+        {
+       "command": "editor.action.rename"
+        }
+      ],
+    }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -1419,7 +1442,6 @@
   "extensions.ignoreRecommendations": true,
   "editor.accessibilitySupport": "off",
   "prettier.requireConfig": true,
-  "react-native-tools.showUserTips": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.inlineSuggest.enabled": true,
   "[python]": {
@@ -1438,5 +1460,8 @@
   "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
-  "gitlens.rebaseEditor.ordering": "asc"
+  "gitlens.rebaseEditor.ordering": "asc",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.postCommitCommand": "push"
 }
