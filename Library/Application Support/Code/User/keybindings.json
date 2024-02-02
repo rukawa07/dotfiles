@@ -5,18 +5,8 @@
         "when": "terminal.active"
     },
     {
-        "key": "tab",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
         "key": "cmd+down",
         "command": "-selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "shift+tab",
-        "command": "selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
@@ -29,11 +19,7 @@
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
-    {
-        "key": "tab",
-        "command": "-editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
-    },
+    // toggle terminal
     {
         "key": "ctrl+;",
         "command": "workbench.action.terminal.toggleTerminal",
@@ -44,11 +30,13 @@
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
+    // QuickFix
     {
-        "key": "ctrl+f",
+        "key": "ctrl+'",
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
+    // Next warning, error or etc
     {
         "key": "ctrl+n",
         "command": "editor.action.marker.next",
@@ -100,5 +88,28 @@
     {
         "key": "cmd+shift+c",
         "command": "workbench.panel.chat.view.copilot.focus",
+    },
+    // 標準サジェストウィジェット内で下移動
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    // 標準サジェストウィジェット内で上移動
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    // 標準のサジェストウィジェットの表示に関係なく，tabでGitHub CopilotのインラインサジェストをAcceptする
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-acceptSelectedSuggestion",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
     },
 ]

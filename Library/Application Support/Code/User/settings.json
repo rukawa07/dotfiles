@@ -1,20 +1,84 @@
 {
-  // terminate
+  // Terminal settings
   "terminal.integrated.fontFamily": "HackGen35 Console NFJ",
   "terminal.integrated.fontSize": 12,
-  "workbench.startupEditor": "newUntitledFile",
-
-  // editor
+  // Editor settings
+  "editor.autoClosingBrackets": "always",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.fontFamily": "HackGen35 Console NFJ",
   "editor.fontSize": 12,
-  "editor.tabSize": 4,
-  "editor.renderWhitespace": "all",
-  "editor.wordWrap": "on",
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
-  "editor.autoClosingBrackets": "always",
-
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint",
+    "source.fixAll.markdownlint",
+  ],
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  // "editor.tabCompletion": "on",
+  // Language-specific settings
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[python]": {
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.formatting.provider": "autopep8",
+  },
+  // Linting settings
+  "css.validate": false,
+  "scss.validate": false,
+  // Other settings
+  "codesnap.containerPadding": "0em",
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "prettier.requireConfig": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"></div>",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.startupEditor": "newUntitledFile",
+  // Git settings
+  "git.openRepositoryInParentFolders": "always",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.postCommitCommand": "push",
+  // GitLens settings
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+  "gitlens.rebaseEditor.ordering": "asc",
+  "gitlens.defaultDateLocale": "ja-JP",
+  // GitHub settings
+  "github.copilot.chat.localeOverride": "ja",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "json": true,
+    "scminput": false,
+    "typescript": true,
+    "typescriptreact": true,
+    "javascript": true
+  },
+  // Diff editor settings
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
   // vim
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
@@ -122,7 +186,7 @@
       ],
       "commands": [
         {
-       "command": "workbench.action.navigateBack"
+          "command": "workbench.action.navigateBack"
         }
       ],
     },
@@ -134,7 +198,7 @@
       ],
       "commands": [
         {
-       "command": "workbench.action.navigateForward"
+          "command": "workbench.action.navigateForward"
         }
       ],
     },
@@ -146,19 +210,19 @@
       ],
       "commands": [
         {
-       "command": "gitlens.toggleFileBlame"
+          "command": "gitlens.toggleFileBlame"
         }
       ],
     },
     // rename symbol (refacor)
     {
       "before": [
-       "<Space>",
+        "<Space>",
         "r"
       ],
       "commands": [
         {
-       "command": "editor.action.rename"
+          "command": "editor.action.rename"
         }
       ],
     }
@@ -183,67 +247,7 @@
       ]
     }
   ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-  ],
-
-  // others
-  "codesnap.containerPadding": "0em",
-  "security.workspace.trust.untrustedFiles": "open",
-  // language-specific settings
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  // eslint
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint",
-    "source.fixAll.stylelint"
-  ],
-  //↓VSCodeデフォルトのフォーマットは無効
-  "css.validate": false,
-  "scss.validate": false,
-  "python.linting.pylintEnabled": false,
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.lintOnSave": true,
-  "python.formatting.provider": "autopep8",
-  "extensions.ignoreRecommendations": true,
-  "editor.accessibilitySupport": "off",
-  "prettier.requireConfig": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.inlineSuggest.enabled": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false,
-    "typescript": "true",
-    "typescriptreact": "true",
-    "javascript": "true"
-  },
-  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"></div>",
-  "workbench.editor.empty.hint": "hidden",
-  "git.openRepositoryInParentFolders": "always",
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "gitlens.rebaseEditor.ordering": "asc",
-  "git.confirmSync": false,
-  "git.autofetch": true,
-  "git.postCommitCommand": "push",
-  "github.copilot.chat.localeOverride": "ja",
-  "gitlens.defaultDateLocale": "ja-JP",
-
+  "vim.visualModeKeyBindingsNonRecursive": [],
   // theme 
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Iceberg",
@@ -1470,4 +1474,11 @@
       ]
     },
   },
+  "cSpell.userWords": [
+    "Anson",
+    "autofetch",
+    "codesnap",
+    "esbenp",
+    "pylint"
+  ],
 }
