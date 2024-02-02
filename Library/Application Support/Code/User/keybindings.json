@@ -92,4 +92,13 @@
         "key": "cmd+shift+g",
         "command": "workbench.view.extension.github-pull-requests",
     },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+shift+c",
+        "command": "workbench.panel.chat.view.copilot.focus",
+    },
 ]
