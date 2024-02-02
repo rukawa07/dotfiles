@@ -41,7 +41,7 @@ if type -q exa
 end
 
 # IDEのように括弧やクォートのペアを補完
-set -U pisces_pairs $pisces_pairs '<,>' '`,`'
+set -U pisces_pairs $pisces_pairs '<,>' '[,]' '{,}' '(,)' '`,`' '","' "','" 
 
 # PostgreSQL
 set -gx PGDATA /usr/local/var/postgres
