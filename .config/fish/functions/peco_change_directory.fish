@@ -18,7 +18,7 @@ function peco_change_directory
     echo $HOME/.config
     # ghq list -p
     # ls -ad */|perl -pe "s#^#$PWD/#"|grep -v \.git
-    ls -ad $HOME/Workspace/*/* |grep -v \.git
+    ls -ad $HOME/Workspace/*/*/* |grep -v \.git
     ls -ad $HOME/.config/* 
     ls -ad $HOME/MyDrive/*/* 
   end | sed -e 's/\/$//' | awk '!a[$0]++' | _peco_change_directory $argv

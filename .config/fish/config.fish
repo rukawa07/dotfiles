@@ -2,7 +2,7 @@
 set fish_greeting 
 
 # set -gx TERM screen-256color
-# theme (bobthefish)
+# theme 
 set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user no
@@ -22,9 +22,8 @@ alias tl "tmux ls"
 alias g git
 alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
-# alias code "open . -a Visual\ Studio\ Code"
-alias buvss "cp ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/keybindings.json ~/.config/Code/User"
 alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias vsc "code ."
 command -qv nvim && alias vim nvim
 
 # aliases for my func
@@ -40,6 +39,9 @@ if type -q exa
   alias ll "exa -l -g --icons --group-directories-first"
   alias lla "ll -a"
 end
+
+# IDEのように括弧やクォートのペアを補完
+set -U pisces_pairs $pisces_pairs '<,>' '`,`'
 
 # PostgreSQL
 set -gx PGDATA /usr/local/var/postgres
