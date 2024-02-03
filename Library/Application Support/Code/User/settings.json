@@ -18,7 +18,6 @@
   ],
   "editor.accessibilitySupport": "off",
   "editor.inlineSuggest.enabled": true,
-  // "editor.tabCompletion": "on",
   // Language-specific settings
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -70,11 +69,12 @@
     "*": false,
     "plaintext": false,
     "markdown": true,
-    "json": true,
+    "jsonc": true,
     "scminput": false,
     "typescript": true,
     "typescriptreact": true,
-    "javascript": true
+    "javascript": true,
+    "python": true,
   },
   // Diff editor settings
   "diffEditor.ignoreTrimWhitespace": false,
