@@ -75,6 +75,7 @@
     "typescriptreact": true,
     "javascript": true,
     "python": true,
+    "c": true,
   },
   // Diff editor settings
   "diffEditor.ignoreTrimWhitespace": false,

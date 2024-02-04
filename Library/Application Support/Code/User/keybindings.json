@@ -112,4 +112,10 @@
         "command": "-acceptSelectedSuggestion",
         "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
     },
+    // 任意のサイドバー（左側のバー）がアクティブなときにescでエディタにフォーカスを移す
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
+    },
 ]
