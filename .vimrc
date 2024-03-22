@@ -165,6 +165,7 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
+  colorscheme iceberg
   " for transparent colorscheme
   " autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight CursorLine ctermbg=NONE guibg=NONE
@@ -174,7 +175,6 @@ if exists("&termguicolors") && exists("&winblend")
   " autocmd ColorScheme * highlight LineNr ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight CursorLineNr ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
-  colorscheme iceberg
 endif
 
 "}}}

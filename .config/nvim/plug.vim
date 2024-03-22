@@ -27,6 +27,7 @@ if has("nvim")
   "Plug 'dart-lang/dart-vim-plugin'
   "Plug 'thosakwe/vim-flutter'
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+  Plug 'github/copilot.vim'
 endif
 
 call plug#end()

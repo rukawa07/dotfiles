@@ -24,11 +24,13 @@ alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
 alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
+alias wq "code ~/Documents/qnotes"
 command -qv nvim && alias vim nvim
 
 # aliases for my func
 alias sug "setup_git"
 alias ira "init_react_app"
+alias qs "qiita_select"
 alias obs "obsidian_select"
 alias qnote "obsidian_quick_note"
 alias mkcmp "make_react_component"
@@ -56,7 +58,6 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 set -gx XDG_CONFIG_HOME ~/.config
 
 
-
 # ---------- PATH ----------
 
 fish_add_path bin 
@@ -73,10 +74,9 @@ fish_add_path $PYENV_ROOT/bin
 source (pyenv init - | psub)
 
 # Android Studio
-set -gx ANDROID_HOME /Users/sfurukawa/.AndroidStudio
-set -gx ANDROID_SDK_ROOT /Users/sfurukawa/.AndroidStudio
-fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin 
-fish_add_path $ANDROID_HOME/emulator 
+set -gx ANDROID_SDK /Users/sfurukawa/Library/Android/sdk
+fish_add_path $ANDROID_SDK/platform-tools
+fish_add_path $ANDROID_SDK/emulator
 
 # JAVA
 set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
@@ -91,5 +91,5 @@ fish_add_path "$VOLTA_HOME/bin"
 # rbenv
 status --is-interactive; and rbenv init - fish | source
 
-# tmux sessionにアタッチ
-attach_tmux_session
+# tmux sessionにアタッチ（VSCode taskでも実行されるので一旦オフ）
+# attach_tmux_session

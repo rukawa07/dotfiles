@@ -12,27 +12,35 @@
   "editor.renderWhitespace": "all",
   "editor.tabSize": 4,
   "editor.wordWrap": "on",
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint",
-    "source.fixAll.markdownlint",
-  ],
   "editor.accessibilitySupport": "off",
   "editor.inlineSuggest.enabled": true,
   // Language-specific settings
   "[typescript]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
   },
   "[python]": {
     "python.linting.pylintEnabled": false,
@@ -66,17 +74,31 @@
   // GitHub settings
   "github.copilot.chat.localeOverride": "ja",
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": true,
-    "jsonc": true,
     "scminput": false,
+    "jsonc": true,
     "typescript": true,
     "typescriptreact": true,
     "javascript": true,
     "python": true,
     "c": true,
+    "ignore": true,
+    "json": true
   },
+  // cSpell settings
+  "cSpell.userWords": [
+    "Anson",
+    "associatedtype",
+    "autofetch",
+    "codesnap",
+    "esbenp",
+    "pylint"
+  ],
+  "cSpell.enableFiletypes": [
+    "jsonc"
+  ],
   // Diff editor settings
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -1475,11 +1497,4 @@
       ]
     },
   },
-  "cSpell.userWords": [
-    "Anson",
-    "autofetch",
-    "codesnap",
-    "esbenp",
-    "pylint"
-  ],
 }

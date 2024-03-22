@@ -19,17 +19,6 @@
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
-    // toggle terminal
-    {
-        "key": "ctrl+;",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
     // QuickFix
     {
         "key": "ctrl+'",
@@ -118,4 +107,14 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "sideBarFocus"
     },
+    // ターミナルの表示・非表示切り替えをVim Insertモードで禁止する
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel",
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.togglePanel",
+        "when": "vim.mode != 'Insert'"
+    }
 ]
