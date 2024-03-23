@@ -1,7 +1,6 @@
 # ログイン時に表示するテキスト
 set fish_greeting 
 
-# set -gx TERM screen-256color
 # theme 
 set -g theme_color_scheme terminal
 set -g fish_prompt_pwd_dir_length 1
