@@ -35,20 +35,18 @@ alias qnote "obsidian_quick_note"
 alias mkcmp "make_react_component"
 alias mkghrr "make_github_remote_repo"
 
-# exa
-if type -q exa
-  alias ll "exa -l -g --icons --group-directories-first"
+# eza
+if type -q eza
+  alias ll "eza -l -g --icons --group-directories-first"
   alias lla "ll -a"
 end
 
 # IDEのように括弧やクォートのペアを補完
 set -U pisces_pairs $pisces_pairs '<,>' '[,]' '{,}' '(,)' '`,`' '","' "','" 
 
-# PostgreSQL
-set -gx PGDATA /usr/local/var/postgres
-
-# homebrewのauto-updateを停止 
+# homebrew
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # mdpdf
 set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
@@ -63,32 +61,16 @@ fish_add_path bin
 fish_add_path ~/bin 
 fish_add_path ~/.local/bin 
 fish_add_path /usr/local/bin
- 
-# Flutter
-fish_add_path /Users/sfurukawa/flutter/bin 
-
-# pyenv
-set -gx PYENV_ROOT $HOME/.pyenv
-fish_add_path $PYENV_ROOT/bin 
-source (pyenv init - | psub)
 
 # Android Studio
 set -gx ANDROID_SDK /Users/sfurukawa/Library/Android/sdk
 fish_add_path $ANDROID_SDK/platform-tools
 fish_add_path $ANDROID_SDK/emulator
 
-# JAVA
-set -gx JAVA_HOME $(/usr/libexec/java_home -v 17)
-
-# react-native
-set -gx REACT_EDITOR code
-
 # volta
 set -gx VOLTA_HOME "$HOME/.volta"
 fish_add_path "$VOLTA_HOME/bin" 
 
-# rbenv
-status --is-interactive; and rbenv init - fish | source
-
 # tmux sessionにアタッチ（VSCode taskでも実行されるので一旦オフ）
 # attach_tmux_session
+
