@@ -21,7 +21,7 @@ alias tl "tmux ls"
 alias g git
 alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
-alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
 alias wq "code ~/Documents/qnotes"
 alias history "history --show-time='%Y-%m-%d %H:%M:%S '"
