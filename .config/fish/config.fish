@@ -24,6 +24,7 @@ alias cg "chatgpt-cli -ml"
 alias config "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
 alias wq "code ~/Documents/qnotes"
+alias history "history --show-time='%Y-%m-%d %H:%M:%S '"
 command -qv nvim && alias vim nvim
 
 # aliases for my func
@@ -53,7 +54,6 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
-
 
 # ---------- PATH ----------
 
