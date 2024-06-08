@@ -1,11 +1,11 @@
 {
   // Terminal settings
-  "terminal.integrated.fontFamily": "HackGen35 Console NFJ",
+  "terminal.integrated.fontFamily": "HackGen35 Console NF",
   "terminal.integrated.fontSize": 12,
   // Editor settings
   "editor.autoClosingBrackets": "always",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.fontFamily": "HackGen35 Console NFJ",
+  "editor.fontFamily": "HackGen35 Console NF",
   "editor.fontSize": 12,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",

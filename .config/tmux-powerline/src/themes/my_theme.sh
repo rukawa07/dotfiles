@@ -52,7 +52,7 @@ fi
 
 if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
-		"os_icon 0 15" \
+		"tmux_icon 0 15" \
 		"my_tmux_session_info 4 235" \
 		# "hostname 33 0" \
 		#"ifstat 30 255" \
