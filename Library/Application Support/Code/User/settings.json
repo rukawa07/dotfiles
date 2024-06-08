@@ -1497,4 +1497,5 @@
       ]
     },
   },
+  "terminal.integrated.defaultProfile.osx": "fish",
 }

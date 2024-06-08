@@ -29,15 +29,15 @@ TERM = "alacritty-direct"
 size = 12.0
 
 [font.bold]
-family = "HackGen35 Console NFJ"
+family = "HackGen35 Console NF"
 style = "Bold"
 
 [font.italic]
-family = "HackGen35 Console NFJ"
+family = "HackGen35 Console NF"
 style = "Italic"
 
 [font.normal]
-family = "HackGen35 Console NFJ"
+family = "HackGen35 Console NF"
 style = "Regular"
 
 [selection]
