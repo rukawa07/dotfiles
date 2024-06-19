@@ -18,15 +18,16 @@ $time\
 [directory]
 style = "fg:#161821 bg:#84a0c6"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = "…/"
 
 [directory.substitutions]
+"Desktop" = " "
 "Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-
+"Workspace" = "󰈮 "
 [git_branch]
 symbol = ""
 style = "bg:#394260"

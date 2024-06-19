@@ -12,8 +12,7 @@ set number
 "色をつける
 syntax enable
 "ファイル書き込み時の文字コード
-set fileencodings=utf-8,sjis,euc-jp,latin
-"Vim内の文字コード
+set fileencodings=utf-8,sjis,euc-jp,latin "Vim内の文字コード
 set encoding=utf-8
 "編集するファイル名を表示
 set title
@@ -40,6 +39,9 @@ set expandtab
 set shell=fish
 "書き込むファイル名がこの中にあればバックアップファイルを作成しない
 set backupskip=/tmp/*,/private/tmp/*
+"タブ文字や行末文字を表示する
+set listchars=tab:»-,trail:-,eol:↲
+set list
 
 
 " incremental substitution (neovim)
@@ -160,7 +162,7 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  colorscheme iceberg
+  colorscheme nord
   " for transparent colorscheme
   " autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
   " autocmd ColorScheme * highlight CursorLine ctermbg=NONE guibg=NONE

@@ -3,11 +3,11 @@ call plug#begin(plug_dir)
 
 Plug 'cohama/lexima.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'nordtheme/vim'
 Plug 'preservim/nerdcommenter'
 
 if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'nvim-orgmode/orgmode'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'nvim-lua/popup.nvim'
