@@ -40,9 +40,9 @@ set shell=fish
 "書き込むファイル名がこの中にあればバックアップファイルを作成しない
 set backupskip=/tmp/*,/private/tmp/*
 "タブ文字や行末文字を表示する
-set listchars=tab:»-,trail:-,eol:↲
+"set listchars=tab:󰌒,trail:-,eol:
+set listchars=tab:»-,trail:-,eol:
 set list
-
 
 " incremental substitution (neovim)
 if has('nvim')

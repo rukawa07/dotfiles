@@ -14,6 +14,8 @@
 	export TMUX_POWERLINE_DIR_USER_THEMES=""
 	# Overlay directory to look for segments. There you can put your own segments outside the repo. Fallback will still be the "segments" directory in the repo.
 	export TMUX_POWERLINE_DIR_USER_SEGMENTS=""
+    # Justify the status line to the left or to the right.
+    export TMUX_POWERLINE_STATUS_JUSTIFICATION="left"
 # }
 
 # battery.sh { How to display battery remaining. Can be {percentage, cute}.
