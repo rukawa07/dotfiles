@@ -37,6 +37,7 @@ alias obs "obsidian_select"
 alias qnote "obsidian_quick_note"
 alias mkcmp "make_react_component"
 alias mkghrr "make_github_remote_repo"
+alias color "sh $HOME/.config/fish/functions/show_256_terminal_colors.sh"
 
 # eza
 if type -q eza
