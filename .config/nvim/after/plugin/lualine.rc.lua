@@ -1,6 +1,19 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
 
+local function get_simple_vim_mode(vim_mode)
+  -- If vim_mode is Visual Line mode, return 'VL'
+  if vim_mode == 'V-LINE' then
+    return 'VL'
+  -- If vim_mode is Visual Block mode, return 'VB'
+  elseif vim_mode == 'V-BLOCK' then
+    return 'VB'
+  -- Otherwise, return the first character of vim_mode
+  else
+    return vim_mode:sub(1, 1)
+  end
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -21,7 +34,7 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {{ 'mode', fmt = function(str) return str:sub(1,1) end }},
+    lualine_a = {{ 'mode', fmt = get_simple_vim_mode }},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
