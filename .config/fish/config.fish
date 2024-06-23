@@ -25,7 +25,7 @@ alias cg "chatgpt-cli -ml"
 alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
 alias wq "code ~/Documents/qnotes"
-alias history "history --show-time='%Y-%m-%d %H:%M:%S '"
+alias history "history --show-time='%Y-%m-%d %H:%M:%S ' | less"
 alias cdq "cd ~/Documents/qnotes"
 command -qv nvim && alias vim nvim
 
