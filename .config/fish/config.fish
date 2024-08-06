@@ -3,11 +3,6 @@ set fish_greeting
 
 # theme 
 starship init fish | source
-# set -g theme_color_scheme terminal
-# set -g fish_prompt_pwd_dir_length 1
-# set -g theme_display_user no
-# set -g theme_display_hostname no
-# set -g theme_display_git_default_branch yes
 
 # aliases
 alias ls "ls -p -G"
@@ -26,7 +21,7 @@ alias cg "chatgpt-cli -ml"
 alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
 alias wq "code ~/Documents/qnotes"
-alias history "history --show-time='%Y-%m-%d %H:%M:%S '"
+alias history "history --show-time='%Y-%m-%dT%H:%M:%S '"
 alias cdq "cd ~/Documents/qnotes"
 command -qv nvim && alias vim nvim
 
