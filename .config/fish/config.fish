@@ -26,7 +26,7 @@ alias cg "chatgpt-cli -ml"
 alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
 alias wq "code ~/Documents/qnotes"
-alias history "history --show-time='%Y-%m-%d %H:%M:%S ' | less"
+alias history "history --show-time='%Y-%m-%d %H:%M:%S '"
 alias cdq "cd ~/Documents/qnotes"
 command -qv nvim && alias vim nvim
 
@@ -60,7 +60,10 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 set -gx XDG_CONFIG_HOME ~/.config
 
 # fzf
-set -gx FZF_DEFAULT_OPTS '--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+if type -q fzf
+  set -gx FZF_DEFAULT_OPTS '--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+  fzf --fish | source
+end
 
 # ---------- PATH ----------
 
