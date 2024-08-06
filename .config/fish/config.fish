@@ -19,7 +19,7 @@ alias ta "tmux a -t"
 alias td "tmux detach"
 alias tk "tmux kill-session -t"
 alias tl "tmux ls"
-alias bat "bat --theme=nord"
+alias bat "bat --theme=Nord"
 alias g git
 alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
