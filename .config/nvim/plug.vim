@@ -17,6 +17,7 @@ if has("nvim")
   Plug 'nvim-lua/completion-nvim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'github/copilot.vim'
+  Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 endif
 
 call plug#end()

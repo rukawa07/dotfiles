@@ -19,6 +19,7 @@ alias ta "tmux a -t"
 alias td "tmux detach"
 alias tk "tmux kill-session -t"
 alias tl "tmux ls"
+alias bat "bat --theme=nord"
 alias g git
 alias rr "cd (git rev-parse --show-toplevel)"
 alias cg "chatgpt-cli -ml"
@@ -57,6 +58,9 @@ set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
 
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
+
+# fzf
+set -gx FZF_DEFAULT_OPTS '--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
 
 # ---------- PATH ----------
 
