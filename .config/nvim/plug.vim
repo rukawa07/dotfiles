@@ -2,7 +2,6 @@ let plug_dir = has('nvim') ? '~/.config/nvim/plugged' : '~/.vim/plugged'
 call plug#begin(plug_dir)
 
 Plug 'cohama/lexima.vim'
-Plug 'cocopon/iceberg.vim'
 Plug 'nordtheme/vim'
 Plug 'preservim/nerdcommenter'
 
