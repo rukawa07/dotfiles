@@ -3,5 +3,7 @@ bindings = [
   # キーボード切り替え直後のwの入力と競合するため、Command + W を無効化
   { key = "W", mods = "Command", action = "None" },
   # キーボード切り替え直後のtの入力と競合するため、Command + T を無効化
-  { key = "T", mods = "Command", action = "None" }
+  { key = "T", mods = "Command", action = "None" },
+  # キーボード切り替え直後のtの入力と競合するため、Command + H を無効化
+  { key = "H", mods = "Command", action = "None" }
 ]
