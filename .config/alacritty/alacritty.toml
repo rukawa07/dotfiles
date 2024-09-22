@@ -23,3 +23,6 @@ style = "Regular"
 
 [selection]
 save_to_clipboard = true
+
+[window]
+startup_mode = "Maximized"
