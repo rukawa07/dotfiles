@@ -26,3 +26,4 @@ save_to_clipboard = true
 
 [window]
 startup_mode = "Maximized"
+title = ""
