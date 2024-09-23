@@ -20,6 +20,8 @@ nnoremap <Leader>a gg<S-v>G
 " jjをESCキーに対応
 inoremap <silent> jj <ESC>
 
+" Remove search highlight
+nnoremap <Esc> :noh<CR>
 
 " Save with root permission
 command! W w !sudo tee > /dev/null %
