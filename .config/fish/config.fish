@@ -20,18 +20,12 @@ alias t tig
 alias rr "cd (git rev-parse --show-toplevel)"
 alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vsc "code ."
-alias wq "code ~/Documents/qnotes"
 alias history "history --show-time='%Y-%m-%dT%H:%M:%S '"
 command -qv nvim && alias vim nvim
 
 # aliases for my func
-alias sug "setup_git"
-alias ira "init_react_app"
-alias qs "qiita_select"
 alias obs "obsidian_select"
 alias note "obsidian_quick_note"
-alias mkcmp "make_react_component"
-alias mkghrr "make_github_remote_repo"
 alias color "sh $HOME/.config/fish/functions/show_256_terminal_colors.sh"
 
 # eza
