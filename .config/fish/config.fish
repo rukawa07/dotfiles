@@ -18,7 +18,8 @@ alias bat "bat --theme=Nord"
 alias g git
 alias t tig
 alias rr "cd (git rev-parse --show-toplevel)"
-alias cfg "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dfstatus "dotfiles tig status"
 alias vsc "code ."
 alias history "history --show-time='%Y-%m-%dT%H:%M:%S '"
 command -qv nvim && alias vim nvim
