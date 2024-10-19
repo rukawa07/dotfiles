@@ -42,7 +42,7 @@ set -gx HOMEBREW_NO_AUTO_UPDATE 1
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # mdpdf
-set -gx MDPDF_STYLES /Users/sfurukawa/.config/mdpdf/github-markdown-light.css
+set -gx MDPDF_STYLES ~/.config/mdpdf/github-markdown-light.css
 
 # XDG Base Directory
 set -gx XDG_CONFIG_HOME ~/.config
@@ -61,13 +61,13 @@ fish_add_path ~/.local/bin
 fish_add_path /usr/local/bin
 
 # Android Studio
-set -gx ANDROID_SDK /Users/sfurukawa/Library/Android/sdk
+set -gx ANDROID_SDK ~/Library/Android/sdk
 fish_add_path $ANDROID_SDK/platform-tools
 fish_add_path $ANDROID_SDK/emulator
 
 # volta
-set -gx VOLTA_HOME "$HOME/.volta"
-fish_add_path "$VOLTA_HOME/bin" 
+set -gx VOLTA_HOME ~/.volta
+fish_add_path $VOLTA_HOME/bin
 
 # tmux sessionにアタッチ（VSCode taskでも実行されるので一旦オフ）
 # attach_tmux_session
