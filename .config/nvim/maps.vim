@@ -23,6 +23,9 @@ inoremap <silent> jj <ESC>
 " Remove search highlight
 nnoremap <Esc> :noh<CR>
 
+" Search with extended regex
+nnoremap / /\v
+
 " Save with root permission
 command! W w !sudo tee > /dev/null %
 
@@ -42,41 +45,3 @@ vnoremap <silent> # :<C-U>
 nnoremap <Leader>s :w<Return>
 nnoremap <Leader>q :wq<Return>
 nnoremap <Leader>Q :q!<Return>
-
-"-----------------------------
-" Tabs
-
-" Open current directory
-nmap te :tabedit 
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
-
-"------------------------------
-" Window
-
-" Split window
-" nmap ss :split<Return><C-w>w
-" nmap sv :vsplit<Return><C-w>w
-
-" Move window
-" nmap <Space> <C-w>w
-" map s<left> <C-w>h
-" map s<up> <C-w>k
-" map s<down> <C-w>j
-" map s<right> <C-w>l
-nmap <Leader>h <C-w>h
-nmap <Leader>k <C-w>k
-nmap <Leader>j <C-w>j
-nmap <Leader>l <C-w>l
-
-" Close window
-nmap <Leader>x <C-w>c
-
-" Return to the previous file
-" nmap sr <C-^>
-
-" Resize window
-" nmap <C-w><left> <C-w><
-" nmap <C-w><right> <C-w>>
-" nmap <C-w><up> <C-w>+
-" nmap <C-w><down> <C-w>-
