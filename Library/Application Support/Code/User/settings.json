@@ -95,7 +95,9 @@
     "autofetch",
     "codesnap",
     "esbenp",
-    "pylint"
+    "pylint",
+    "iOSDC",
+    "Qiita"
   ],
   "cSpell.enableFiletypes": [
     "jsonc"
