@@ -4,7 +4,6 @@ function obsidian_quick_note
   else if test -e ~/Obsidian/MyVault/QuickNotes/{$argv}\.md
     nvim ~/Obsidian/MyVault/QuickNotes/{$argv}\.md
   else
-    echo "# $argv" > ~/Obsidian/MyVault/QuickNotes/{$argv}\.md
     nvim ~/Obsidian/MyVault/QuickNotes/{$argv}\.md
   end
 end
