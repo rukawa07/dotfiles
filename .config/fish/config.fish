@@ -9,18 +9,26 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+
 alias ts "tmux new -s"
 alias ta "tmux a -t"
 alias td "tmux detach"
 alias tk "tmux kill-session -t"
 alias tl "tmux ls"
+
 alias bat "bat --theme=Nord"
+
+alias rr "cd (git rev-parse --show-toplevel)"
+
 alias g git
 alias t tig
-alias rr "cd (git rev-parse --show-toplevel)"
 alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dfstatus "dotfiles tig status"
+alias dts "dotfiles tig status"
+alias dtr "dotfiles tig refs"
+alias dtl "dotfiles tig log"
+
 alias vsc "code ."
+
 alias history "history --show-time='%Y-%m-%dT%H:%M:%S '"
 command -qv nvim && alias vim nvim
 
