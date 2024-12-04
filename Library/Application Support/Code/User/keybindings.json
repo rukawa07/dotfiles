@@ -116,5 +116,9 @@
         "key": "cmd+j",
         "command": "workbench.action.togglePanel",
         "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "workbench.view.extension.github-actions"
     }
 ]
