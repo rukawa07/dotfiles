@@ -62,6 +62,9 @@ if type -q fzf
   fzf --fish | source
 end
 
+# codex
+set -gx CODEX_HOME "$HOME/.config/codex"
+
 # ---------- PATH ----------
 
 fish_add_path bin 

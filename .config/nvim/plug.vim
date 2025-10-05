@@ -17,15 +17,7 @@ if has("nvim")
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'github/copilot.vim'
   Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-  Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 endif
 
 call plug#end()
-
-lua << EOF
-require("CopilotChat").setup {
-  debug = true, -- Enable debugging
-  -- See Configuration section for rest
-}
-EOF
 
