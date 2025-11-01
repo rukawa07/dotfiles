@@ -10,15 +10,15 @@ TERM = "alacritty-direct"
 size = 12.0
 
 [font.bold]
-family = "HackGen35 Console NF"
+family = "UDEV Gothic 35NFLG"
 style = "Bold"
 
 [font.italic]
-family = "HackGen35 Console NF"
+family = "UDEV Gothic 35NFLG"
 style = "Italic"
 
 [font.normal]
-family = "HackGen35 Console NF"
+family = "UDEV Gothic 35NFLG"
 style = "Regular"
 
 [selection]
