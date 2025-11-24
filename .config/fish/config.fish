@@ -65,6 +65,9 @@ end
 # codex
 set -gx CODEX_HOME "$HOME/.config/codex"
 
+# claude code
+set -gx ANTHROPIC_MODEL "claude-sonnet-4-5-20250929"
+
 # ---------- PATH ----------
 
 fish_add_path bin 

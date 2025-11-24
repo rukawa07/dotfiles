@@ -1,11 +1,11 @@
 {
   // Terminal settings
-  "terminal.integrated.fontFamily": "HackGen35 Console NF",
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontFamily": "UDEV Gothic NFLG",
+  "terminal.integrated.fontSize": 12.5,
   // Editor settings
   "editor.autoClosingBrackets": "always",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.fontFamily": "HackGen35 Console NF",
+  "editor.fontFamily": "UDEV Gothic 35NFLG",
   "editor.fontSize": 12,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
@@ -41,6 +41,7 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "diffEditor.ignoreTrimWhitespace": false,
   },
   "[python]": {
     "python.linting.pylintEnabled": false,
@@ -48,6 +49,13 @@
     "python.linting.flake8Enabled": true,
     "python.linting.lintOnSave": true,
     "python.formatting.provider": "autopep8",
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD007": {
+      // indentation is set to 4 spaces
+      "indent": 4
+    }
   },
   // Linting settings
   "css.validate": false,
@@ -104,7 +112,6 @@
   ],
   // Diff editor settings
   "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
   // vim
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
@@ -279,4 +286,18 @@
   "workbench.colorTheme": "Nord",
   "terminal.integrated.defaultProfile.osx": "fish",
   "explorer.confirmDelete": false,
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "mv": true,
+    "mkdir": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true
+  },
 }
