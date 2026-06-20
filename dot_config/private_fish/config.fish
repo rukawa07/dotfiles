@@ -39,7 +39,8 @@ alias color "sh $HOME/.config/fish/functions/show_256_terminal_colors.sh"
 
 alias c "claude"
 alias oc "op run --env-file=.env -- claude"
-alias uc "brew update && brew upgrade claude-code"
+
+alias cz "chezmoi"
 
 # eza
 if type -q eza
@@ -105,3 +106,6 @@ direnv hook fish | source
 
 # glow
 set -gx GLOW_STYLE $HOME/.config/glow/nord.json
+
+# chezmoi
+set -gx EDITOR nvim
