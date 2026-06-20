@@ -54,6 +54,9 @@ keybind = cmd+t=ignore
 # Disable Command+H (to avoid conflict with keyboard switching)
 keybind = cmd+h=ignore
 
+# Disable Command+D (to avoid conflict with keyboard switching)
+keybind = cmd+d=ignore
+
 # =============================================================================
 # macOS Specific Settings
 # =============================================================================
