@@ -1,0 +1,65 @@
+# Ghostty Configuration
+
+# =============================================================================
+# Font Settings
+# =============================================================================
+font-family = Bizin Gothic NF
+font-family-bold = Bizin Gothic NF Bold
+font-family-italic = Bizin Gothic NF
+font-family-bold-italic = Bizin Gothic NF
+font-size = 13.5
+
+font-thicken = true
+font-thicken-strength = 1
+
+# =============================================================================
+# Window Settings
+# =============================================================================
+# Start maximized
+maximize = true
+background-opacity = 0.8
+background-blur-radius = 4
+
+# =============================================================================
+# Cursor Settings
+# =============================================================================
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
+# =============================================================================
+# Selection / Clipboard
+# =============================================================================
+copy-on-select = clipboard
+
+# =============================================================================
+# Theme
+# =============================================================================
+theme = Nord
+
+# =============================================================================
+# Titlebar Settings
+# =============================================================================
+title = " "
+
+# =============================================================================
+# Keybindings
+# =============================================================================
+# Disable Command+W (to avoid conflict with keyboard switching)
+keybind = cmd+w=ignore
+
+# Disable Command+T (to avoid conflict with keyboard switching)
+keybind = cmd+t=ignore
+
+# Disable Command+H (to avoid conflict with keyboard switching)
+keybind = cmd+h=ignore
+
+# =============================================================================
+# macOS Specific Settings
+# =============================================================================
+# Use option key as alt for terminal programs
+macos-option-as-alt = true
+
+# Titlebar style
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden

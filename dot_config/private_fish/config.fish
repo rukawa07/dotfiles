@@ -1,0 +1,111 @@
+# ログイン時に表示するテキスト
+set fish_greeting 
+
+# theme 
+set -gx STARSHIP_CONFIG "$HOME/.config/starship.toml"
+starship init fish | source
+
+# aliases
+alias ls "ls -p -G"
+alias la "ls -A"
+alias ll "ls -l"
+alias lla "ll -A"
+
+alias ts "tmux new -s"
+alias ta "tmux a -t"
+alias td "tmux detach"
+alias tk "tmux kill-session -t"
+alias tl "tmux ls"
+
+alias bat "bat --theme=Nord"
+
+alias rr "cd (git rev-parse --show-toplevel)"
+
+alias g git
+alias t tig
+alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dts "dotfiles tig status"
+alias dtr "dotfiles tig refs"
+alias dtl "dotfiles tig log"
+
+alias vsc "code ."
+
+alias history "history --show-time='%Y-%m-%dT%H:%M:%S '"
+command -qv nvim && alias vim nvim
+alias v "vim"
+
+alias acf "source ~/.config/fish/config.fish" # apply config.fishのアクロニム
+
+# aliases for my func
+alias obs "obsidian_select"
+alias note "obsidian_fleeting"
+alias color "sh $HOME/.config/fish/functions/show_256_terminal_colors.sh"
+
+alias c "claude"
+alias oc "op run --env-file=.env -- claude"
+alias uc "brew update && brew upgrade claude-code"
+
+# eza
+if type -q eza
+  alias ll "eza -l -g --icons --group-directories-first"
+  alias lla "ll -a"
+end
+
+# timg
+alias timg "timg -p k -g(math \"$COLUMNS * 0.8\")x"
+
+# IDEのように括弧やクォートのペアを補完
+set -U pisces_pairs $pisces_pairs '<,>' '[,]' '{,}' '(,)' '`,`' '","' "','" 
+
+# homebrew
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# mdpdf
+set -gx MDPDF_STYLES ~/.config/mdpdf/github-markdown-light.css
+
+# XDG Base Directory
+set -gx XDG_CONFIG_HOME ~/.config
+
+# fzf
+if type -q fzf
+  set -gx FZF_DEFAULT_OPTS '--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+  fzf --fish | source
+end
+
+# codex
+set -gx CODEX_HOME "$HOME/.config/codex"
+
+# claude code
+set -gx ANTHROPIC_MODEL "claude-sonnet-4-6"
+set -gx CLAUDE_CODE_EFFORT_LEVEL "high"
+set -gx ENABLE_TOOL_SEARCH "auto:5"
+
+# ---------- PATH ----------
+
+fish_add_path bin 
+fish_add_path ~/bin 
+fish_add_path ~/.local/bin 
+fish_add_path /usr/local/bin
+
+# Android Studio
+set -gx ANDROID_SDK ~/Library/Android/sdk
+fish_add_path $ANDROID_SDK/platform-tools
+fish_add_path $ANDROID_SDK/emulator
+
+# java
+set -gx JAVA_HOME "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+fish_add_path $JAVA_HOME/bin
+
+# volta
+set -gx VOLTA_HOME ~/.volta
+fish_add_path $VOLTA_HOME/bin
+
+# tmux sessionにアタッチ（VSCode taskでも実行されるので一旦オフ）
+# attach_tmux_session
+
+# direnv
+direnv hook fish | source
+
+# glow
+set -gx GLOW_STYLE $HOME/.config/glow/nord.json

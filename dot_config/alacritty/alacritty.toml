@@ -1,0 +1,29 @@
+import = [
+"~/.config/alacritty/theme.toml",
+"~/.config/alacritty/keybindings.toml",
+]
+
+[env]
+TERM = "alacritty-direct"
+
+[font]
+size = 13.5
+
+[font.bold]
+family = "Bizin Gothic NF"
+style = "Bold"
+
+[font.italic]
+family = "Bizin Gothic NF"
+style = "Italic"
+
+[font.normal]
+family = "Bizin Gothic NF"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+startup_mode = "Maximized"
+title = ""

@@ -1,0 +1,326 @@
+{
+  // Terminal settings
+  "terminal.integrated.fontFamily": "Bizin Gothic NF",
+  "terminal.integrated.fontSize": 13.5,
+  // Editor settings
+  "editor.autoClosingBrackets": "always",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.fontFamily": "Bizin Gothic NF",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  // Language-specific settings
+  "[typescript]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": [
+      "source.fixAll.eslint",
+    ],
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "diffEditor.ignoreTrimWhitespace": true,
+  },
+  "[python]": {
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.formatting.provider": "autopep8",
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD007": {
+      // indentation is set to 4 spaces
+      "indent": 4
+    }
+  },
+  // Linting settings
+  "css.validate": false,
+  "scss.validate": false,
+  // Other settings
+  "codesnap.containerPadding": "0em",
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "prettier.requireConfig": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"></div>",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.startupEditor": "newUntitledFile",
+  // Git settings
+  "git.openRepositoryInParentFolders": "always",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.postCommitCommand": "push",
+  // GitLens settings
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+  "gitlens.rebaseEditor.ordering": "asc",
+  "gitlens.defaultDateLocale": "ja-JP",
+  // GitHub settings
+  "github.copilot.chat.localeOverride": "ja",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "jsonc": true,
+    "typescript": true,
+    "typescriptreact": true,
+    "javascript": true,
+    "python": true,
+    "c": true,
+    "ignore": true,
+    "json": true
+  },
+  // cSpell settings
+  "cSpell.userWords": [
+    "Anson",
+    "Alamofire",
+    "associatedtype",
+    "autofetch",
+    "codesnap",
+    "esbenp",
+    "pylint",
+    "iOSDC",
+    "Qiita"
+  ],
+  "cSpell.enableFiletypes": [
+    "jsonc"
+  ],
+  // Diff editor settings
+  "diffEditor.ignoreTrimWhitespace": false,
+  // vim
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+  "vim.foldfix": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "s"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.files.save"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "q"
+      ],
+      "commands": [
+        {
+          "command": ":wq"
+        },
+      ]
+    },
+    {
+      "before": [
+        "<Space>",
+        "<S-q>"
+      ],
+      "commands": [
+        {
+          "command": ":q!"
+        },
+      ]
+    },
+    // select All lines
+    {
+      "before": [
+        "<Space>",
+        "a"
+      ],
+      "after": [
+        "g",
+        "g",
+        "<S-v>",
+        "<S-g>",
+      ]
+    },
+    // focus on keyword  and show the hover
+    {
+      "before": [
+        "<Space>",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    // jump to definition or callers
+    {
+      "before": [
+        "<Space>",
+        "j"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition"
+        }
+      ],
+      "when": [
+        "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+      ]
+    },
+    // navigate to the previous cursor
+    {
+      "before": [
+        "<Space>",
+        "h"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.navigateBack"
+        }
+      ],
+    },
+    // navigate to the next cursor
+    {
+      "before": [
+        "<Space>",
+        "l"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.navigateForward"
+        }
+      ],
+    },
+    // toggle file blame
+    {
+      "before": [
+        "<Space>",
+        "b"
+      ],
+      "commands": [
+        {
+          "command": "gitlens.toggleFileBlame"
+        }
+      ],
+    },
+    // rename symbol (refacor)
+    {
+      "before": [
+        "<Space>",
+        "r"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ],
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        ";",
+        ";"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [],
+  // theme 
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Nord",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "explorer.confirmDelete": false,
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "mv": true,
+    "mkdir": true,
+    "swift": true,
+    "/^\\./gradlew build$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "read": true,
+    "set": true,
+    "string": true,
+    "test": true,
+    "end": true,
+    "math": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true
+  },
+  "chat.mcp.gallery.enabled": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "chat.useAgentSkills": true,
+  "github.copilot.chat.cli.mcp.enabled": true,
+  "git.blame.editorDecoration.enabled": true,
+  "chat.tools.urls.autoApprove": {
+    "https://ghostty.org": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+}
