@@ -23,10 +23,6 @@ alias rr "cd (git rev-parse --show-toplevel)"
 
 alias g git
 alias t tig
-alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias dts "dotfiles tig status"
-alias dtr "dotfiles tig refs"
-alias dtl "dotfiles tig log"
 
 alias vsc "code ."
 
