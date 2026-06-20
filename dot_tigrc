@@ -1,0 +1,29 @@
+# main view の左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# blame view の行数表示をON、intervalを1に。
+set blame-view = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
+# Pager系の行数表示をON、intervalを1に (default: line-number:no, interval=5)
+set pager-view = line-number:yes,interval=1 text
+set stage-view = line-number:yes,interval=1 text
+set log-view   = line-number:yes,interval=1 text
+set blob-view  = line-number:yes,interval=1 text
+set diff-view  = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+# 色指定
+color default    default default normal
+color cursor     white blue bold 
+color status     green default
+color delimiter  magenta default
+color "diff --"  yellow default
+color "@@"       magenta default
+color "+"        green default
+
+# バインディング
+bind generic F none
+bind main F ?git fetch -p
+bind main S ?git stash save "%(prompt Enter stash comment: )"
+bind refs P ?git push -u origin %(branch) 
+bind refs L ?git pull origin %(branch)
+bind main I !git rebase -i %(commit)^ # カーソル位置のコミットの親までinteractive rebaseを起動
