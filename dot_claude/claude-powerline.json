@@ -1,0 +1,48 @@
+{
+  "theme": "custom",
+  "colors": {
+    "custom": {
+      "directory": { "bg": "#5E81AC", "fg": "#ECEFF4" },
+      "git": { "bg": "#88C0D0", "fg": "#2E3440" },
+      "model": { "bg": "#EBCB8B", "fg": "#2E3440", "bold": true },
+      "session": { "bg": "#D08770", "fg": "#2E3440" },
+      "today": { "bg": "#EBCB8B", "fg": "#2E3440" },
+      "context": { "bg": "#81A1C1", "fg": "#ECEFF4" }
+    }
+  },
+  "display": {
+    "style": "powerline",
+    "charset": "text",
+    "colorCompatibility": "auto",
+    "autoWrap": true,
+    "padding": 1,
+    "lines": [
+      {
+        "segments": {
+          "directory": { "enabled": true, "style": "fish" },
+          "git": { "enabled": true },
+          "model": { "enabled": true },
+          "session": { "enabled": true, "type": "tokens", "costSource": "calculated" }
+        }
+      },
+      {
+        "segments": {
+          "today": { "enabled": true, "type": "cost" },
+          "context": {
+            "enabled": true,
+            "showPercentageOnly": false,
+            "displayStyle": "text",
+            "autocompactBuffer": 33000
+          }
+        }
+      }
+    ]
+  },
+  "budget": {
+    "session": { "warningThreshold": 80 }
+  },
+  "modelContextLimits": {
+    "sonnet": 1000000,
+    "opus": 200000
+  }
+}
