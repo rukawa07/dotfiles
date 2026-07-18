@@ -74,9 +74,9 @@ end
 set -gx CODEX_HOME "$HOME/.config/codex"
 
 # claude code
-set -gx ANTHROPIC_MODEL "claude-sonnet-5"
-set -gx CLAUDE_CODE_EFFORT_LEVEL "high"
 set -gx ENABLE_TOOL_SEARCH "auto:5"
+set -gx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
+set -gx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-6"
 
 # ---------- PATH ----------
 
